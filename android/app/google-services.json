@@ -1,0 +1,63 @@
+{
+    "project_info": {
+      "project_number": "750176798764",
+      "project_id": "smarthealthapp-c787e",
+      "storage_bucket": "smarthealthapp-c787e.appspot.com"
+    },
+    "client": [
+      {
+        "client_info": {
+          "mobilesdk_app_id": "1:750176798764:android:b6e795a8241447bedd6989",
+          "android_client_info": {
+            "package_name": "com.rsnmed.smarthealth"
+          }
+        },
+        "oauth_client": [
+          {
+            "client_id": "750176798764-57fjpgd6n186a87qqg1d882c2l5j82lg.apps.googleusercontent.com",
+            "client_type": 1,
+            "android_info": {
+              "package_name": "com.rsnmed.smarthealth",
+              "certificate_hash": "8d64918e6166bf77c5a759dce9988d0b86514dfa"
+            }
+          },
+          {
+            "client_id": "750176798764-i9b9cdgb73o9mt18192etp6ajuvvpfol.apps.googleusercontent.com",
+            "client_type": 1,
+            "android_info": {
+              "package_name": "com.rsnmed.smarthealth",
+              "certificate_hash": "6352db4a2968b192cff7f35ef697b8a3d4c5be6a"
+            }
+          },
+          {
+            "client_id": "750176798764-nvk4i000eahvtqbe4nt7et2mb9c7fri9.apps.googleusercontent.com",
+            "client_type": 3
+          }
+        ],
+        "api_key": [
+          {
+            "current_key": "AIzaSyDf7U0OwVzFNRyvXBYf3eTh-GqBZMuSzp4"
+          }
+        ],
+        "services": {
+          "appinvite_service": {
+            "other_platform_oauth_client": [
+              {
+                "client_id": "750176798764-nvk4i000eahvtqbe4nt7et2mb9c7fri9.apps.googleusercontent.com",
+                "client_type": 3
+              },
+              {
+                "client_id": "750176798764-ivufn2m4g317smrgcplpg0pvt9a2ood9.apps.googleusercontent.com",
+                "client_type": 2,
+                "ios_info": {
+                  "bundle_id": "com.smarthelath.hcp",
+                  "app_store_id": "123456789"
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "configuration_version": "1"
+  }

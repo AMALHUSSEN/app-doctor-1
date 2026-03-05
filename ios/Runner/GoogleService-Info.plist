@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>750176798764-ivufn2m4g317smrgcplpg0pvt9a2ood9.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.750176798764-ivufn2m4g317smrgcplpg0pvt9a2ood9</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>750176798764-57fjpgd6n186a87qqg1d882c2l5j82lg.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyC96Iuwy3Se6vTFUSBZOijV3yqJ3PzZieU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>750176798764</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.smarthelath.hcp</string>
+	<key>PROJECT_ID</key>
+	<string>smarthealthapp-c787e</string>
+	<key>STORAGE_BUCKET</key>
+	<string>smarthealthapp-c787e.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:750176798764:ios:4e3fc39de6cdef46dd6989</string>
+</dict>
+</plist>
