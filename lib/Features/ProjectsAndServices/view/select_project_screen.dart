@@ -10,7 +10,6 @@ import 'package:smarthealth_hcp/Features/HomeScreen/view/home_screen.dart';
 import 'package:smarthealth_hcp/Features/ProjectsAndServices/model/get_projects_response_model/projects_data.dart';
 import 'package:smarthealth_hcp/Features/ProjectsAndServices/view/select_service_screen.dart';
 import 'package:smarthealth_hcp/Features/ProjectsAndServices/view_model/select_project_view_model.dart';
-import 'package:smarthealth_hcp/Features/License/view_model/license_view_model.dart';
 import 'package:smarthealth_hcp/common_widget.dart/apploading.dart';
 import 'package:smarthealth_hcp/constants/api_consts.dart';
 import 'package:smarthealth_hcp/constants/color_consts.dart';
@@ -100,52 +99,6 @@ class SelectProjectScreenState extends State<SelectProjectScreen> {
     });
 
     super.initState();
-  }
-
-  Widget _buildLicenseBadge(int? projectId) {
-    if (projectId == null) return const SizedBox();
-    final licenseViewModel = context.read<LicenseViewModel>();
-    final license = licenseViewModel.getLicenseForProject(projectId);
-    if (license == null) return const SizedBox();
-
-    Color badgeColor;
-    String badgeText;
-    final l10n = AppLocalizations.of(context)!;
-
-    switch (license.status) {
-      case 'active':
-        badgeColor = greenColor;
-        badgeText = l10n.license_active;
-        break;
-      case 'expired':
-        badgeColor = redColor;
-        badgeText = l10n.license_expired;
-        break;
-      case 'suspended':
-        badgeColor = orangeColor;
-        badgeText = l10n.license_suspended;
-        break;
-      default:
-        badgeColor = Colors.grey;
-        badgeText = license.status ?? '';
-    }
-
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
-      decoration: BoxDecoration(
-        color: badgeColor.withOpacity(0.15),
-        borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: badgeColor, width: 1),
-      ),
-      child: Text(
-        badgeText,
-        style: appTextStyle.copyWith(
-          fontSize: 10,
-          fontWeight: FontWeight.w600,
-          color: badgeColor,
-        ),
-      ),
-    );
   }
 
   @override
@@ -316,7 +269,6 @@ class SelectProjectScreenState extends State<SelectProjectScreen> {
                                                               ),
                                                         ),
                                                       ),
-                                                      _buildLicenseBadge(data.id),
                                                     ],
                                                   ),
                                                   const SizedBox(height: 10.0),

@@ -543,63 +543,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get service_not_available => 'Service is not available';
 
   @override
-  String get license => 'License';
-
-  @override
-  String get licenses => 'Licenses';
-
-  @override
-  String get license_status => 'License Status';
-
-  @override
-  String get license_active => 'Active';
-
-  @override
-  String get license_expired => 'Expired';
-
-  @override
-  String get license_suspended => 'Suspended';
-
-  @override
-  String get license_cancelled => 'Cancelled';
-
-  @override
-  String get license_plan => 'Plan';
-
-  @override
-  String get license_expires_on => 'Expires on';
-
-  @override
-  String get license_days_remaining => 'days remaining';
-
-  @override
-  String get license_auto_renew => 'Auto Renew';
-
-  @override
-  String get license_patients => 'Patients';
-
-  @override
-  String get license_doctors => 'Doctors';
-
-  @override
-  String get license_voucher_services => 'Voucher Services';
-
-  @override
-  String get license_no_licenses => 'No licenses found';
-
-  @override
-  String get license_expiring_soon => 'License expiring soon!';
-
-  @override
-  String get license_expired_warning => 'Project license has expired. Please contact your administrator.';
-
-  @override
-  String get license_of => 'of';
-
-  @override
-  String get license_unlimited => 'Unlimited';
-
-  @override
   String get step_in_progress => 'In Progress';
 
   @override

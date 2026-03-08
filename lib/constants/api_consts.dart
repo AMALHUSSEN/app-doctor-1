@@ -88,5 +88,3 @@ String get APP_VERSION_API => "${BASE_URL}version-apps";
 String get GET_BLOCK_PROJECTS_API => '${BASE_URL}auth/BlockProject';
 
 String get SPECIALITY_API => '${BASE_URL}specialitie';
-
-String get LICENSE_API => '${BASE_URL}auth/license';

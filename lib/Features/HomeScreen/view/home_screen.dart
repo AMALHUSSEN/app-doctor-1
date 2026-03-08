@@ -8,8 +8,6 @@ import 'package:provider/provider.dart';
 import 'package:smarthealth_hcp/Features/CMSPage/view/cmspage_screen.dart';
 import 'package:smarthealth_hcp/Features/HomeScreen/model/app_setting_response/data.dart';
 import 'package:smarthealth_hcp/Features/HomeScreen/view_model/home_screen_view_model.dart';
-import 'package:smarthealth_hcp/Features/License/view/license_screen.dart';
-import 'package:smarthealth_hcp/Features/License/view_model/license_view_model.dart';
 import 'package:smarthealth_hcp/Features/Login/view/login_screen.dart';
 import 'package:smarthealth_hcp/Features/MyList/view/my_list_screen.dart';
 import 'package:smarthealth_hcp/Features/ProjectsAndServices/view/select_project_screen.dart';
@@ -41,7 +39,6 @@ class HomeScreenState extends State<HomeScreen>
   bool disableRequestCall = true;
 
   late HomeScreenViewModel homeScreenViewModel;
-  late LicenseViewModel licenseViewModel;
   late AppSettingData appSettingData;
 
   callHomeScreenAPI() {
@@ -131,11 +128,6 @@ class HomeScreenState extends State<HomeScreen>
   @override
   void initState() {
     homeScreenViewModel = context.read<HomeScreenViewModel>();
-    licenseViewModel = context.read<LicenseViewModel>();
-
-    licenseViewModel.getLicenses().then((_) {
-      if (mounted) setState(() {});
-    });
 
     homeScreenViewModel.getBlockProjects();
     if (!PlatformUtils.isWeb) homeScreenViewModel.checkAppVersion().then((value) async {
@@ -344,48 +336,6 @@ class HomeScreenState extends State<HomeScreen>
                     textAlign: TextAlign.left,
                     style: appTextStyle.copyWith(color: grey, fontSize: 15),
                   ),
-                  // License expiry warning banner
-                  if (licenseViewModel.hasExpiringLicense())
-                    Padding(
-                      padding: const EdgeInsets.only(top: 16),
-                      child: GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const LicenseScreen(),
-                            ),
-                          );
-                        },
-                        child: Container(
-                          padding: const EdgeInsets.all(12),
-                          decoration: BoxDecoration(
-                            color: Colors.orange.withOpacity(0.1),
-                            borderRadius: BorderRadius.circular(12),
-                            border: Border.all(color: orangeColor, width: 1),
-                          ),
-                          child: Row(
-                            children: [
-                              const Icon(Icons.warning_amber_rounded,
-                                  color: orangeColor, size: 24),
-                              const SizedBox(width: 10),
-                              Expanded(
-                                child: Text(
-                                  '${AppLocalizations.of(context)!.license_expiring_soon} ${licenseViewModel.getExpiringLicense()?.projectName ?? ''} - ${licenseViewModel.getExpiringLicense()?.daysRemaining ?? 0} ${AppLocalizations.of(context)!.license_days_remaining}',
-                                  style: appTextStyle.copyWith(
-                                    fontSize: 13,
-                                    color: orangeColor,
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                ),
-                              ),
-                              const Icon(Icons.chevron_right,
-                                  color: orangeColor, size: 20),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
                   const SizedBox(height: 50),
                   Row(
                     children: [
@@ -488,48 +438,6 @@ class HomeScreenState extends State<HomeScreen>
                         ),
                       ),
                     ],
-                  ),
-                  const SizedBox(height: 10),
-                  // License card
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const LicenseScreen(),
-                        ),
-                      );
-                    },
-                    child: Card(
-                      color: Theme.of(context).cardColor,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20.0),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 10.0,
-                          vertical: 15.0,
-                        ),
-                        child: Row(
-                          children: [
-                            SizedBox(
-                              height: 40,
-                              width: 30,
-                              child: Icon(Icons.verified_user,
-                                  color: themeBlueColor, size: 30),
-                            ),
-                            const SizedBox(width: 20),
-                            Text(
-                              AppLocalizations.of(context)!.licenses,
-                              style: appTextStyle.copyWith(
-                                fontSize: 18.0,
-                                fontWeight: FontWeight.w600,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
                   ),
                   const SizedBox(height: 10),
                   disableRequestCall != true

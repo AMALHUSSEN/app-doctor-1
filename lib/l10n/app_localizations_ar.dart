@@ -543,63 +543,6 @@ class AppLocalizationsAr extends AppLocalizations {
   String get service_not_available => 'الخدمة غير متوفرة';
 
   @override
-  String get license => 'الترخيص';
-
-  @override
-  String get licenses => 'التراخيص';
-
-  @override
-  String get license_status => 'حالة الترخيص';
-
-  @override
-  String get license_active => 'نشط';
-
-  @override
-  String get license_expired => 'منتهي';
-
-  @override
-  String get license_suspended => 'معلق';
-
-  @override
-  String get license_cancelled => 'ملغي';
-
-  @override
-  String get license_plan => 'الخطة';
-
-  @override
-  String get license_expires_on => 'ينتهي في';
-
-  @override
-  String get license_days_remaining => 'أيام متبقية';
-
-  @override
-  String get license_auto_renew => 'تجديد تلقائي';
-
-  @override
-  String get license_patients => 'المرضى';
-
-  @override
-  String get license_doctors => 'الأطباء';
-
-  @override
-  String get license_voucher_services => 'خدمات القسائم';
-
-  @override
-  String get license_no_licenses => 'لم يتم العثور على تراخيص';
-
-  @override
-  String get license_expiring_soon => 'الترخيص على وشك الانتهاء!';
-
-  @override
-  String get license_expired_warning => 'انتهت صلاحية ترخيص المشروع. يرجى التواصل مع المسؤول.';
-
-  @override
-  String get license_of => 'من';
-
-  @override
-  String get license_unlimited => 'غير محدود';
-
-  @override
   String get step_in_progress => 'قيد التنفيذ';
 
   @override

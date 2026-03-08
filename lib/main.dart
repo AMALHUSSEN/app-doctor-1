@@ -27,7 +27,6 @@ import 'package:smarthealth_hcp/Features/ResetPassword/view_model/reset_password
 import 'package:smarthealth_hcp/Features/ThemeProvider/theme_provider.dart';
 import 'package:smarthealth_hcp/Features/ValidateVoucher/view_model/validate_voucher_view_model.dart';
 import 'package:smarthealth_hcp/Features/Verificarion/view_model/verification_view_model.dart';
-import 'package:smarthealth_hcp/Features/License/view_model/license_view_model.dart';
 import 'package:smarthealth_hcp/Features/new_consent_upload/view_model/new_consent_view_model.dart';
 import 'package:smarthealth_hcp/LocalizationProvider/locale_provider.dart';
 import 'package:smarthealth_hcp/constants/firebase_const.dart';
@@ -207,7 +206,6 @@ class _MainAppState extends State<MainApp> {
         ChangeNotifierProvider(create: (_) => ValidateVoucherViewModel()),
         ChangeNotifierProvider(create: (_) => LocaleProvider()),
         ChangeNotifierProvider(create: (_) => CMSPageViewModel()),
-        ChangeNotifierProvider(create: (_) => LicenseViewModel()),
         ChangeNotifierProvider(create: (_) => NewConsentFileViewModel()),
       ],
       child: Builder(
